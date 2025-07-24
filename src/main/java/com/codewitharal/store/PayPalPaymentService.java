@@ -1,5 +1,10 @@
 package com.codewitharal.store;
 
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Service;
+
+@Service("paypal")
+@Primary
 public class PayPalPaymentService implements PaymentService {
 
     @Override

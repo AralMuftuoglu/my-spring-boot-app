@@ -3,8 +3,14 @@ package com.codewitharal.store;
 import org.springframework.core.annotation.Order;
 
 public class OrderService {
+
+    private PaymentService paymentService;
+
+    public OrderService(PaymentService paymentService) {
+        this.paymentService = paymentService;
+    }
+
     public void placeOrder() {
-        StripePaymentService paymentService = new StripePaymentService();
         paymentService.processPayment(12);
     }
 }

@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: store
+stripe:
+  apiUrl: https://api.stripe.com
+  enabled: true
+  timeout: 100
+  supported-currencies:  USD, TL, EUR

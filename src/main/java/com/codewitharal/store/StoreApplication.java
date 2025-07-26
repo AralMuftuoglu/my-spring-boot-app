@@ -9,7 +9,12 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class StoreApplication {
 
     public static void main(String[] args) {
-        ConfigurableApplicationContext context = SpringApplication.run(StoreApplication.class, args);
+        ApplicationContext context = SpringApplication.run(StoreApplication.class, args);
+        UserService userService = context.getBean(UserService.class);
+        userService.registerUser(new User(1L,"aral","aralmuftuoglu@gmail.com","1234"));
+        userService.registerUser(new User(1L,"aral","arlmuftuoglu@gmail.com","1234"));
+
+
 //        OrderService orderService = context.getBean(OrderService.class);
 //        OrderService orderService2 = context.getBean(OrderService.class);
 //
@@ -18,8 +23,8 @@ public class StoreApplication {
 //
 //        context.getBean(HeavyResource.class);
 
-        NotificationManager notificationManager =  context.getBean(NotificationManager.class);
-        notificationManager.sendNotification("sa as");
+//        NotificationManager notificationManager =  context.getBean(NotificationManager.class);
+//        notificationManager.sendNotification("sa as","a");
     }
 }
 

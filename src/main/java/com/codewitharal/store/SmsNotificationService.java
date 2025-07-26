@@ -4,11 +4,11 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 @Service("sms")
-@Primary
+//@Primary
 public class SmsNotificationService implements NotificationService {
 
     @Override
-    public void sendNotification(String notification) {
+    public void sendNotification(String notification, String recipientEmail) {
         System.out.println("Sending SMS: " + notification);
     }
 }

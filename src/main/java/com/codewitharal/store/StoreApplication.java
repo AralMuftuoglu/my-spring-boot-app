@@ -10,13 +10,16 @@ public class StoreApplication {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(StoreApplication.class, args);
-        OrderService orderService = context.getBean(OrderService.class);
-        OrderService orderService2 = context.getBean(OrderService.class);
+//        OrderService orderService = context.getBean(OrderService.class);
+//        OrderService orderService2 = context.getBean(OrderService.class);
+//
+//        orderService.placeOrder();
+//
+//
+//        context.getBean(HeavyResource.class);
 
-        orderService.placeOrder();
-
-
-        context.getBean(HeavyResource.class);
+        NotificationManager notificationManager =  context.getBean(NotificationManager.class);
+        notificationManager.sendNotification("sa as");
     }
 }
 
